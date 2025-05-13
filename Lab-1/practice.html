@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1 style="color: red;"> This my FIrst Lab</h1>
+    <h2>We will learn Basic HTML, CSS, JS</h2>
+    <h3>We will learn Basic HTML, CSS, JS</h3>
+    <h3>We will learn Basic HTML, CSS, JS</h3>
+
+    <p>
+        THIS IS A pARAGRAPH
+    </p>
+    <p id="p2"> PARA 2 </p>
+
+    <p id="para3">This will not show</p>
+
+    <p id="para4">This is Para4</p>
+    <button type="button" onclick="paraChange()">Change Para4</button>
+    <button type="button" onclick="prevparaChange()">Prev Para4</button>
+
+    </br></br>
+
+    <label for="name">Name</label>
+    <input type="text", id="myname">
+
+    </br>
+
+    <label for="id">ID  </label>
+    <input type="text", id="myid">
+    </br>
+    <button type="button" onclick="myinfo()">My Info</button>
+    <br>
+    <p id="para5"></p>
+
+
+</body>
+</html>
+
+
+<script>
+    document.getElementById("para3").innerHTML= "2222This is Para3";
+
+    function paraChange(){
+        document.getElementById("para4").innerHTML = "Par4 is changed";
+    }
+
+    console.log("This is consollll");
+
+    function prevparaChange(){
+        document.getElementById("para4").innerHTML = "This is Para4";
+    }
+    function myinfo(){
+        var name = document.getElementById("myname").value;
+        var sid = document.getElementById("myid").value;
+
+        var allinfo = "Name: " + name + "</br>" + "ID: " + sid;
+
+        document.getElementById("para5").innerHTML = allinfo;
+
+    }
+
+
+
+</script>
