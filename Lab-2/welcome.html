@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <br><br>
+    <h2 id="fullName">Full Name: </h2>
+    <h2 id="email">Email: </h2>
+    <h2 id="country">Country: </h2>
+
+</body>
+</html>
+
+<script>
+    const urlData = new URLSearchParams(window.location.search);
+    const fullName = urlData.get("fullName");
+    const email = urlData.get("email");
+    const country = urlData.get("country");
+
+    document.getElementById("fullName").innerHTML = fullName;
+    document.getElementById("email").innerHTML = email;
+    document.getElementById("country").innerHTML = country;
+</script>
