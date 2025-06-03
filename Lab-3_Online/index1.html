@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <button type="button" onclick="addDiv()">Click</button>
+
+
+    <div id="mainDiv">
+        <div id="div1">
+            <p>This is div 1</p>
+
+        </div>
+
+        <div id="div2">
+            <p>This is div 2</p>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function addDiv(){
+
+        $('#mainDiv').append(
+            '<div id="div3">'+
+                '<p>This is div3</p>' +
+            '</div>'
+        );
+
+        $('#div3').css({
+            'width': '33%',
+            'background-color': 'green',
+            'float': 'left'
+    });
+
+    }
+
+</script>
