@@ -1,0 +1,89 @@
+<html>
+<head>
+  <title>JavaScript Page</title>
+</head>
+
+<body>
+  <script>
+    document.write("Hello world!");
+
+    document.write("<p>How are <br/>" +
+                   "<i>you</i>?</p>");
+  </script>
+  <p>Here is some static text as well.</p>
+
+<hr>
+
+  <script type="text/javascript">
+    var x, y; 
+    x = 1024;
+    y = x;
+    x = "foobar";
+    document.write("<p>x = " + y + "</p>");
+    document.write("<p>x = " + x + "</p>");
+  </script>
+
+<hr>
+
+<script>
+    distanceToSun = 93.3e6*5280*12;
+    thickness = .002;
+
+    foldCount = 0;    
+    while (thickness < distanceToSun) {
+        thickness *= 2;
+        foldCount++;
+    }
+    document.write("Number of folds = " +
+                   foldCount);
+</script>
+<hr>
+
+<h2>Prime Number Checker</h2>
+
+  <input type="number" id="numberInput" placeholder="Enter a number" />
+  <button onclick="checkPrime()">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+    function isPrime(n) {
+      if (n < 2) {
+        return false;
+      } else if (n == 2) {
+        return true;
+      } else {
+        for (var i = 2; i <= Math.sqrt(n); i++) {
+          if (n % i == 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+    }
+
+    function checkPrime() {
+      var num = parseInt(document.getElementById("numberInput").value);
+      var resultText = isPrime(num) ? num + " is a prime number." : num + " is not a prime number.";
+      document.getElementById("result").innerText = resultText;
+    }
+  </script>
+
+<hr>
+
+<h2>Random Number (1 to 10)</h2>
+  <button onclick="showRandom()">Get Random Number</button>
+  <p id="random_res"></p>
+
+  <script>
+    function showRandom() {
+      var num = Math.floor(Math.random() * 10) + 1;
+      document.getElementById("random_res").innerText = "Random Number: " + num;
+    }
+  </script>
+  <hr>
+  
+
+
+</body>
+</html>
