@@ -1,0 +1,36 @@
+<!-- 
+Question:
+Create a webpage with:
+
+Two text boxes to input numbers.
+
+A button labeled "Calculate Sum".
+
+When the button is clicked, the sum of the numbers should be displayed in a paragraph below.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Quiz Question-3</title>
+</head>
+<body>
+    <h2>Sum Calculator</h2>
+    <input type="text" id="num1" placeholder="Enter first number">
+    <input type="text" id="num2" placeholder="Enter second number">
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateSum(){
+            var number1 = parseFloat(document.getElementById('num1').value);
+            var number2 = parseFloat(document.getElementById('num2').value);
+            var sum = number1 + number2;
+            document.getElementById('result').innerHTML = 'Sum: ' + sum;
+        }
+    </script>
+    
+</body>
+</html>
