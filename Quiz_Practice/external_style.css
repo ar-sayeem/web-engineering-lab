@@ -1,0 +1,15 @@
+h1 {color : blue; text-align : center}
+p.indented {text-indent:0.2in}
+
+#vugichugi {
+    color: aqua;
+}
+h2.ban{
+    color: blueviolet;
+}
+
+body { background-color: rgb(222, 150, 16);
+}
+@media screen and (max-width: 600px) {
+  body { background-color: lightblue; }
+}
