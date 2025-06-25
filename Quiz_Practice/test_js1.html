@@ -14,14 +14,15 @@
 
 <hr>
 
-  <script type="text/javascript">
-    var x, y; 
-    x = 1024;
-    y = x;
-    x = "foobar";
-    document.write("<p>x = " + y + "</p>");
-    document.write("<p>x = " + x + "</p>");
-  </script>
+<script>
+  var x, y; 
+  x = 1024;
+  y = x;
+  x = "foobar";
+  document.write("<p>x = " + y + "</p>");
+  document.write("<p>x = " + x + "</p>");
+</script>
+
 
 <hr>
 
@@ -83,6 +84,76 @@
   </script>
   <hr>
   
+  <p id="demo">Original text</p>
+  <button onclick="document.getElementById('demo').innerText = 'Text has changed!'">Click Me</button>
+
+  <hr>
+
+  <form onsubmit="return validateForm()">
+  Name: <input type="text" id="name">
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+  function validateForm() {
+    var x = document.getElementById("name").value;
+    if (x == "") {
+      alert("Name must be filled out!");
+      return false;
+    }
+    return true;
+  }
+</script>
+
+<hr>
+
+<img id="roll" src="assets/images/robin.png" width="200"
+     onmouseover="this.src='assets/images/luffy.png';"
+     onmouseout="this.src='assets/images/robin.png';">
+
+
+<hr>
+
+<p id="greeting"></p>
+<script>
+  var hour = new Date().getHours();
+  var text = (hour < 12) ? "Good Morning!" : "Good Afternoon!";
+  document.getElementById("greeting").innerText = text;
+</script>
+
+<hr>
+
+<button onclick="setCookie()">Save Name</button>
+<button onclick="alert(getCookie())">Show Name</button>
+
+<script>
+  function setCookie() {
+    document.cookie = "username=Adnan; max-age=3600"; // valid for 1 hour
+  }
+
+  function getCookie() {
+    var cookies = document.cookie.split("; ");
+    for (var i = 0; i < cookies.length; i++) {
+      var parts = cookies[i].split("=");
+      if (parts[0] === "username") return parts[1];
+    }
+    return "No cookie found";
+  }
+</script>
+
+<script>
+    var a = 42;
+    var b = "Hello";
+    var c = true;
+    var d = {name: "Adnan"};
+    var e = undefined;
+
+    document.write("<p>Type of a: " + typeof a + "</p>");
+    document.write("<p>Type of b: " + typeof b + "</p>");
+    document.write("<p>Type of c: " + typeof c + "</p>");
+    document.write("<p>Type of d: " + typeof d + "</p>");
+    document.write("<p>Type of e: " + typeof e + "</p>");
+  </script>
 
 
 </body>

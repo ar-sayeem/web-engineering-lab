@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Example</title>
+</head>
+<body>
+
+  <h3>JavaScript Array Example</h3>
+
+  <script>
+    // Declare and initialize an array
+    var fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+    // Accessing elements
+    document.write("<p>First fruit: " + fruits[0] + "</p>");
+
+    // Adding an item
+    fruits.push("Pineapple");
+
+    // Loop through the array
+    document.write("<p>All fruits:</p><ul>");
+    for (var i = 0; i < fruits.length; i++) {
+      document.write("<li>" + fruits[i] + "</li>");
+    }
+    document.write("</ul>");
+
+    fruits.pop("Pineapple");
+
+    // Loop through the array
+    document.write("<p>All fruits:</p><ul>");
+    for (var i = 0; i < fruits.length; i++) {
+      document.write("<li>" + fruits[i] + "</li>");
+    }
+    document.write("</ul>");
+  </script>
+
+
+</body>
+</html>

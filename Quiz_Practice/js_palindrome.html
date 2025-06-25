@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Palindrome Simple</title></head>
+<body>
+
+<button onclick="checkPalindrome()">Check Palindrome</button>
+<p id="result"></p>
+
+<script>
+function checkPalindrome() {
+    let word = prompt("Enter a word:");
+    let reverseWord = word.split('').reverse().join('');
+
+    if (word === reverseWord) {
+        document.getElementById("result").innerHTML = "It is a palindrome.";
+    } else {
+        document.getElementById("result").innerHTML = "It is not a palindrome.";
+    }
+}
+</script>
+
+</body>
+</html>

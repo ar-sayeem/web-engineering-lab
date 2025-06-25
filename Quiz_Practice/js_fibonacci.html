@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>Fibonacci Simple</title></head>
+<body>
+
+<button onclick="fibonacci()">Show Fibonacci</button>
+<p id="output"></p>
+
+<script>
+function fibonacci() {
+    let n = prompt("Enter number of terms:");
+    n = parseInt(n);
+
+    let a = 0, b = 1;
+    let result = a + ", " + b;
+
+    for (let i = 2; i < n; i++) {
+        let c = a + b;
+        result += ", " + c;
+        a = b;
+        b = c;
+    }
+
+    document.getElementById("output").innerHTML = result;
+}
+</script>
+
+</body>
+</html>

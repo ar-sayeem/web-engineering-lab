@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Date Example</title>
+</head>
+<body>
+    <h2>JavaScript Date Example</h2>
+    <button onclick="showDateInfo()">Show Date Info</button>
+    <p id="output"></p>
+
+    <script>
+        function showDateInfo() {
+            let today = new Date(); // Current date and time
+
+            let text = "Year: " + today.getFullYear() + "<br>" +
+                       "Month: " + today.getMonth() + "<br>" +
+                       "Day: " + today.getDay() + "<br>" +
+                       "Hours: " + today.getHours() + "<br>" +
+                       "Minutes: " + today.getMinutes() + "<br>" +
+                       "Seconds: " + today.getSeconds() + "<br>" +
+                       "Milliseconds: " + today.getMilliseconds();
+
+            document.getElementById("output").innerHTML = text;
+        }
+    </script>
+</body>
+</html>
