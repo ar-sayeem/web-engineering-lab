@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select fruit</title>
+</head>
+<body>
+    <h3>Choose your favorite fruits</h3>
+
+    <div>
+        <label><input type="checkbox" value="Mango"> Mango</label><br>
+        <label><input type="checkbox" value="Orange"> Orange</label><br>
+        <label><input type="checkbox" value="Guava"> Guava</label><br>
+    </div>
+
+    <div>
+        <button onclick="showSelectedFruits()">Submit</button>
+    </div>
+
+    <h4>Selected Fruits:</h4>
+    <div id="result"></div>
+
+    <script>
+        function showSelectedFruits() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            let selected = [];
+
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    selected.push(cb.value);
+                }
+            });
+
+            document.getElementById('result').innerText = selected.join(', ');
+        }
+    </script>
+</body>
+</html>
