@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <title>Fun with Buttons</title>
+</head>
+
+<body>
+  <form name="ButtonForm">
+    <input type="button" value="Click for Greeting" onclick="Greeting();" />
+  </form>
+</body>
+
+<script type="text/javascript">
+  function Greeting()
+  // Results: displays a time-sensitive greeting 
+  {
+    var now = new Date();
+    if (now.getHours() < 12) {
+      alert("Good morning");
+    }
+    else if (now.getHours() < 18) {
+      alert("Good afternoon");
+    }
+    else {
+      alert("Good evening");
+    }
+  }       
+</script>
+
+</html>
