@@ -1,0 +1,13 @@
+/* MSIE.css */
+
+a {
+    text-decoration: none;
+    font-size: larger;
+    color: red;
+    font-family: Arial;
+  }
+  
+  a:hover {
+    color: blue;
+  }
+  
