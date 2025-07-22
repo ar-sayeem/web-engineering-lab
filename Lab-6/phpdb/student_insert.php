@@ -13,13 +13,16 @@
 <body>
 
 <?php
-function db_conn(){
-    $conn = new mysqli("localhost", "root", "", "61_H1");
-    if ($conn->connect_error) die("Connection Failed!");
-    echo "<div class='success'>✓ Connected Successfully!</div>";
-}
 
-db_conn();
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "61_H1";
+
+
+$conn = new mysqli($host, $username, $password, $database);
+if ($conn->connect_error) die("Connection Failed!");
+    echo "<div class='success'>✓ Connected Successfully!</div>";
 
 $name = $_POST['myname'];
 $id = $_POST['myid'];
@@ -31,7 +34,15 @@ echo "<strong>Student Information:</strong><br>";
 echo "Name: $name <br>";
 echo "ID: $id <br>";
 echo "Marks: $marks";
-echo "</div>";
+
+$squery = "INSERT INTO students (name, id, marks) VALUES ('$name', '$id', '$marks')";
+// $conn->query($squery);
+if ($conn->query($squery) === TRUE) {
+    echo "<br>✓ Data Inserted Successfully!";
+} else {
+    echo "Error: " . $conn->error;
+}
+
 ?>
 
 <a href="student _info.php" class="btn">← Back to Form</a>
